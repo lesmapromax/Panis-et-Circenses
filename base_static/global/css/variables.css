@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    background: var(--white);
+}
+
+:root {
+    /* Colors */
+    --white: #fff;
+    --light-gray: #8c8c8c;
+    --primary-color: #f7c6ec;
+    --dark-primary-color: #ff0096;
+    --light-primary-color: #ffe5f9;
+    --secondary-color: #fd5959;
+
+    /* Spaces */
+    --xs-space: 10px;
+    --sm-space: 12px;
+    --md-space: 16px;
+    --lg-space: 20px;
+    --xg-space: 24px;
+}
+
+.center {
+    margin: 0 auto;
+}
+
+.base-img {
+    width: 100%;
+}
+
+

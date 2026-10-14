@@ -1,0 +1,46 @@
+.header-container {
+    display: flex;
+    flex-flow: column nowrap;
+    background: var(--light-primary-color);
+}
+
+.important{
+    padding: var(--sm-space);
+}
+
+.important2 {
+    padding: var(--sm-space);
+}
+
+.title {
+    color: var(--dark-primary-color);
+    font-family: 'UnifrakturMaguntia', cursive;
+    font-weight: 700;
+    font-size: 3rem;
+}
+
+.subtitle {
+    color: #fd5959;
+}
+
+.footer {
+    color: var(--light-gray);
+    padding: 5px
+}
+
+.article-box-container {
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 10px;
+    padding: var(--sm-space);
+    background: var(--primary-color);
+}
+
+.box-title {
+    padding: var(--xs-space);
+    color: var(--light-primary-color);
+}
+
+.box-description {
+
+}
