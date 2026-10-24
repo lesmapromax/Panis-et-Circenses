@@ -28,19 +28,33 @@
     padding: 5px
 }
 
-.article-box-container {
+.articles-container {
     display: flex;
     flex-flow: column nowrap;
-    margin: 10px;
+    gap: var(--sm-space);
+    padding: var(--sm-space) var(--md-space);
+}
+
+.article-box-container {
     padding: var(--sm-space);
     background: var(--primary-color);
 }
 
 .box-title {
+    color: var(--dark-primary-color);
     padding: var(--xs-space);
-    color: var(--light-primary-color);
 }
 
 .box-description {
-
+    color: var(--secondary-color);
+    padding: 10px;
 }
+
+.link {
+    text-decoration: none;
+}
+
+.box-author {
+    color: var(--light-gray);
+}
+
