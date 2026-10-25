@@ -29,10 +29,14 @@ html {
     margin: 0 auto;
 }
 
+.flex-center {
+    align-items: center;
+}
+
 .container {
     display: flex;
     align-items: center;
-    gap: 16px;
+    gap: var(--md-space);
 }
 
 .base-img {
@@ -48,6 +52,15 @@ html {
     height: 50px;
     border-radius: 50%;
     object-fit: cover;
+}
+
+.md-top-padding {
+    padding-top: var(--md-space);
+}
+
+.content {
+    line-height: 1.6rem;
+    font-weight: 550;
 }
 
 
