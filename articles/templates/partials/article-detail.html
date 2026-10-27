@@ -1,0 +1,17 @@
+{% load static %}
+<div class="article-container">
+    <div class="center md-top-padding">
+        {% if article_view.cover %}
+            <img src="{% static article_view.cover.name|cut:'articles/static' %}" alt="{{ article_view.title }}"
+                 class="base-img article-img">
+        {% else %}
+            <img src="https://placehold.co/1260x150" alt="" class="base-img article-img">
+        {% endif %}
+    </div>
+    <div class="center md-top-padding">
+        <h2 class="title">{{ article_view.title }}</h2>
+    </div>
+    <div class="content article-content-container">
+        {{ article_view.content }}
+    </div>
+</div>

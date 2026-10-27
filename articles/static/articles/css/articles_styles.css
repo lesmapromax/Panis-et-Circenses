@@ -45,6 +45,7 @@
 .box-title {
     color: var(--dark-primary-color);
     padding: var(--xs-space);
+    text-align: center;
 }
 
 .box-description {

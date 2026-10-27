@@ -1,14 +1,28 @@
-from django.shortcuts import render
-from django.views import View
+from django.utils import timezone
 
-class ArticleList(View):
-    def get(self, *args, **kwargs):
-        context = {
-            'title': 'Home',
-        }
-        return render(self.request, 'pages/article_list.html', context=context)
+from django.views.generic import ListView, DetailView
+from .models import Article
 
 
-class Article(View):
-    def get(self, *args, **kwargs):
-        return render(self.request, 'pages/article.html')
+class ArticleListView(ListView):
+    model = Article
+    paginate_by = 10
+    template_name = 'pages/article_list.html'
+    context_object_name = 'articles_list'
+    queryset = Article.objects.filter(is_published=True).order_by('-updated_at')
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['now'] = timezone.now()
+        return context
+
+
+class ArticleView(DetailView):
+    model = Article
+    template_name = 'pages/article.html'
+    context_object_name = 'article_view'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['now'] = timezone.now()
+        return context
