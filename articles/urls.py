@@ -1,7 +1,6 @@
 from django.conf.urls.static import static
-from django.urls import path, URLPattern
+from django.urls import path
 
-import articles
 from project import settings
 from .views import ArticleListView, ArticleView
 
